@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Synced Events Calendar</title>
+<style>
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1f2937; max-width: 760px; margin: 0 auto; padding: 48px 20px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 19px; margin-top: 32px; }
+  .meta { color: #6b7280; font-size: 14px; }
+  a { color: #116dff; }
+</style>
+</head>
+<body>
+<h1>Privacy Policy</h1>
+<p class="meta">Synced Events Calendar, an app for Wix sites · Effective 7 September 2026 · Operated by operix (contact: beobjoong@gmail.com)</p>
+
+<h2>1. What the app does</h2>
+<p>Synced Events Calendar adds a calendar widget to a Wix site. The site owner connects one or more calendars from the Wix dashboard: a public Google Calendar, any iCal/ICS address, or the site's own events. The app fetches the events of those calendars, keeps a copy in the site's own Wix CMS, and shows them to visitors in the widget.</p>
+
+<h2>2. Data we process</h2>
+<ul>
+  <li><strong>Calendar addresses and settings.</strong> The Google Calendar id or iCal address entered by the site owner, together with a display name, color and on/off state, is stored in a collection inside that site's own Wix CMS ("Calendar Sources"). An iCal address may be a private (secret) address; it is stored only in the site's CMS and is never shown to visitors.</li>
+  <li><strong>Event data.</strong> Events fetched from a connected calendar (title, start and end time, location, description, recurrence) for a window of about one month back and twelve months ahead are stored in the site's Wix CMS ("Calendar Cache") and refreshed periodically. Whatever the calendar contains is shown to visitors of the site, so the site owner controls what is published by choosing which calendars to connect.</li>
+  <li><strong>Sync status.</strong> For each connected calendar the app records when it was last fetched, how many events were found and any error message, so the site owner can see that the calendar is working.</li>
+  <li><strong>Site registration.</strong> To serve the widget to visitors, we keep a record of each site where the app is installed (the Wix site id and the app instance id, both technical identifiers issued by Wix). This record contains no personal data.</li>
+  <li><strong>Visitor requests.</strong> When a visitor opens a page with the widget, their browser requests the event list from the app's backend. The backend applies a per-address rate limit and keeps the requesting address in server memory for up to one minute for that purpose only; it is not written to any log or database. No cookies are set by the app.</li>
+  <li><strong>Site owner contact details.</strong> Wix shares the site owner's account details needed to operate the app and billing (for example the site owner's email) under the permissions shown when the app is installed.</li>
+</ul>
+
+<h2>3. Data we do not process</h2>
+<p>The app does not read customer lists, orders, payments, members' private data or form submissions, does not ask for access to the site owner's Google account, and does not place tracking cookies for advertising.</p>
+
+<h2>4. Where data is stored</h2>
+<p>Calendar sources and cached events live in the site's own Wix CMS, under the site owner's control; the owner can delete them at any time, and Wix removes the app's collections when the app is uninstalled. The app's backend runs on Wix's hosting infrastructure. Short-lived copies of merged event lists (up to 30 seconds) exist only in server memory. Calendar feeds are fetched directly from the provider chosen by the site owner (for example Google), whose own privacy policy applies to that request.</p>
+
+<h2>5. Legal basis and retention</h2>
+<p>We process calendar and event data on the instructions of the site owner in order to display the calendars they chose to publish. Data is kept as long as the calendar stays connected; removing a calendar from the dashboard deletes its cached events, and uninstalling the app removes the app's collections from the site. The site registration record is deleted automatically when the app is uninstalled (Wix notifies the app of the removal), and on request.</p>
+
+<h2>6. Sharing</h2>
+<p>We do not sell or share data with third parties. Data is processed by Wix (as the platform hosting the site, the CMS and the app backend) under Wix's own terms and privacy policy, and calendar providers receive the fetch requests described above.</p>
+
+<h2>7. Your rights</h2>
+<p>Site visitors should contact the site owner about events shown on that site. Site owners can contact us at <a href="mailto:beobjoong@gmail.com">beobjoong@gmail.com</a> to ask about the app's processing, request deletion of registration records, or raise a complaint. Where GDPR, UK GDPR or CCPA apply, you have the rights those laws provide, including access, correction and deletion.</p>
+
+<h2>8. Changes</h2>
+<p>We will update this page when the app's data handling changes and note the new effective date above.</p>
+</body>
+</html>
