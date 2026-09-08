@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help — Synced Events Calendar</title>
+<style>
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1f2937; max-width: 760px; margin: 0 auto; padding: 48px 20px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin-top: 36px; padding-top: 12px; border-top: 1px solid #e5e7eb; }
+  h3 { font-size: 16px; margin-top: 22px; }
+  .meta { color: #6b7280; font-size: 14px; }
+  a { color: #116dff; }
+  ol li, ul li { margin: 4px 0; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  .toc { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; margin: 18px 0 8px; }
+  .toc a { display: inline-block; margin: 2px 12px 2px 0; }
+  .note { background: #eff6ff; border-radius: 8px; padding: 10px 14px; margin: 10px 0; font-size: 15px; }
+</style>
+</head>
+<body>
+<h1>Synced Events Calendar — Help</h1>
+<p class="meta">Show Google Calendar, iCal feeds and Wix Events in one calendar on your Wix site · Questions: <a href="mailto:beobjoong@gmail.com">beobjoong@gmail.com</a></p>
+
+<div class="toc">
+  <a href="#start">Getting started</a>
+  <a href="#google">Google Calendar</a>
+  <a href="#outlook">Outlook / Microsoft 365</a>
+  <a href="#apple">Apple iCloud</a>
+  <a href="#teamup">Teamup and other iCal</a>
+  <a href="#wixevents">Wix Events</a>
+  <a href="#widget">Widget settings</a>
+  <a href="#plans">Free and Pro</a>
+  <a href="#trouble">Troubleshooting</a>
+</div>
+
+<h2 id="start">Getting started (three steps)</h2>
+<ol>
+  <li><strong>Connect a calendar.</strong> In your Wix dashboard open <em>Apps → Synced Events Calendar</em>, choose where your calendar lives and paste its address (directions below). Not ready yet? Click <em>Use a sample calendar</em> to see the widget working right away.</li>
+  <li><strong>Add the widget to a page.</strong> In the editor open <em>Add → Apps → Synced Events Calendar</em> and drop the widget onto a page. The widget's settings panel controls the view, colors, week start and time zone.</li>
+  <li><strong>Publish the site.</strong> From then on the calendar refreshes on its own: hourly on the Free plan, every 5 minutes on Pro.</li>
+</ol>
+
+<h2 id="google">Google Calendar</h2>
+<h3>Public calendar (Calendar ID)</h3>
+<ol>
+  <li>Open <a href="https://calendar.google.com" target="_blank" rel="noopener">Google Calendar</a> on the web and click the gear icon → <em>Settings</em>.</li>
+  <li>Under <em>Settings for my calendars</em> pick the calendar.</li>
+  <li>In <em>Access permissions for events</em> tick <em>Make available to public</em>.</li>
+  <li>Scroll to <em>Integrate calendar</em> and copy the <em>Calendar ID</em> (it looks like <code>abc123@group.calendar.google.com</code> or your Gmail address).</li>
+  <li>In the app dashboard choose <em>Google Calendar — public calendar</em> and paste the ID.</li>
+</ol>
+<h3>Private calendar (secret address)</h3>
+<ol>
+  <li>Google Calendar → gear icon → <em>Settings</em> → pick the calendar.</li>
+  <li>Scroll to <em>Integrate calendar</em> and copy <em>Secret address in iCal format</em>.</li>
+  <li>In the app dashboard choose <em>Google Calendar — private (secret address)</em> and paste it.</li>
+</ol>
+<div class="note">The secret address is stored encrypted, shown masked in the dashboard and never sent to visitors. If you ever reset it in Google, paste the new address.</div>
+
+<h2 id="outlook">Outlook / Microsoft 365</h2>
+<ol>
+  <li>Open <a href="https://outlook.office.com/calendar" target="_blank" rel="noopener">Outlook on the web</a> → gear icon → <em>Calendar</em> → <em>Shared calendars</em>.</li>
+  <li>Under <em>Publish a calendar</em> choose the calendar and <em>Can view all details</em>, then click <em>Publish</em>.</li>
+  <li>Copy the <em>ICS</em> link (not the HTML link) and paste it in the app dashboard under <em>Outlook / Microsoft 365</em>.</li>
+</ol>
+<p>Outlook feeds use Windows time-zone names; the app converts them, including daylight-saving changes.</p>
+
+<h2 id="apple">Apple iCloud Calendar</h2>
+<ol>
+  <li>On <a href="https://www.icloud.com/calendar" target="_blank" rel="noopener">iCloud.com → Calendar</a> click the share icon next to the calendar.</li>
+  <li>Tick <em>Public Calendar</em> and copy the link (it starts with <code>webcal://</code>).</li>
+  <li>Paste it in the app dashboard under <em>Apple iCloud Calendar</em>. On a Mac: Calendar app → right-click the calendar → <em>Share Calendar</em> → <em>Public Calendar</em>.</li>
+</ol>
+
+<h2 id="teamup">Teamup and any other iCal feed</h2>
+<p><strong>Teamup:</strong> open the menu → <em>Preferences</em> → <em>iCalendar feeds</em> and copy the feed of the sub-calendar you want to show (ends with <code>.ics</code>).</p>
+<p><strong>Anything else:</strong> most calendar tools (Eventbrite, Luma, Nextcloud, university calendars, WordPress event plugins…) offer an "iCal", "ICS" or "webcal" subscription link in their sharing or export settings. Paste that link; it must open without a login.</p>
+
+<h2 id="wixevents">Wix Events</h2>
+<p>If the Wix Events app is installed on your site, choose <em>Wix Events (this site)</em> and click <em>Connect</em>. Published events appear with their registration status; on Pro the details show an <em>RSVP / Register</em> button that leads to the event page.</p>
+
+<h2 id="widget">Widget settings</h2>
+<ul>
+  <li><strong>Views:</strong> Month and List on every plan; Week and Day on Pro. On narrow screens the month grid switches to a readable list.</li>
+  <li><strong>Style preset:</strong> Classic, Minimal, Bold, Dark or Pastel in one click. Your own accent color and corner radius override the preset; text/background color and font are Pro fields.</li>
+  <li><strong>Time zone:</strong> the visitor's zone, one fixed zone, or a zone you type (any IANA name such as <code>Europe/Berlin</code>).</li>
+  <li><strong>Calendar chips, location, descriptions:</strong> show or hide them; descriptions in list views can be one line, the full text or hidden.</li>
+  <li><strong>Pro extras for visitors:</strong> a search box, add-to-calendar buttons (Google, .ics), a <em>Subscribe</em> button that offers the whole calendar as a feed, and a map link on locations.</li>
+</ul>
+
+<h2 id="plans">Free and Pro</h2>
+<p><strong>Free:</strong> one calendar, unlimited events, month and list views, hourly refresh, no watermark.</p>
+<p><strong>Pro ($4.99/month, or $3.99/month billed yearly):</strong> up to ten calendars with colors and filter chips, refresh every 5 minutes, week and day views, search, styling fields, add-to-calendar, subscribe and RSVP buttons. Upgrade from the app dashboard; the plan is per site.</p>
+
+<h2 id="trouble">Troubleshooting</h2>
+<h3>"This needs the CMS app on your site"</h3>
+<p>The app stores your calendars in your site's CMS. Add <em>CMS</em> from the Wix App Market (free), then reload the app dashboard.</p>
+<h3>Events are missing or out of date</h3>
+<ul>
+  <li>Check the <em>Status</em> column in the dashboard. An error shows the reason (for example a Google calendar that is not public, or an address that no longer answers). Fix the source and click <em>Sync now</em>.</li>
+  <li>Only events from about one month ago to twelve months ahead are shown.</li>
+  <li>A very large calendar shows <em>Partial</em>: descriptions are dropped first, then the calendar is capped at 1,500 events.</li>
+  <li>Visitors see a cached copy that refreshes hourly (Free) or every 5 minutes (Pro).</li>
+</ul>
+<h3>Times look wrong</h3>
+<p>Set the widget's time zone to the calendar's zone if your visitors and your events are in different places. Feeds that omit time-zone definitions are interpreted with the IANA database.</p>
+<h3>The Week or Day view does not appear</h3>
+<p>Those views are part of Pro; on the Free plan the widget shows the month grid instead.</p>
+<h3>Something else</h3>
+<p>Use <em>Send feedback</em> in the app dashboard or email <a href="mailto:beobjoong@gmail.com">beobjoong@gmail.com</a>. Please include your site address and the calendar type.</p>
+
+<p class="meta" style="margin-top:40px">Synced Events Calendar by operix · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p>
+</body>
+</html>
