@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Show an iCal / ICS calendar on your Wix site</title>
+<style>
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1f2937; max-width: 760px; margin: 0 auto; padding: 48px 20px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin-top: 36px; padding-top: 12px; border-top: 1px solid #e5e7eb; }
+  h3 { font-size: 16px; margin-top: 22px; }
+  .meta { color: #6b7280; font-size: 14px; }
+  a { color: #116dff; }
+  ol li, ul li { margin: 4px 0; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  .toc { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; margin: 18px 0 8px; }
+  .toc a { display: inline-block; margin: 2px 12px 2px 0; }
+  .note { background: #eff6ff; border-radius: 8px; padding: 10px 14px; margin: 10px 0; font-size: 15px; }
+</style>
+</head>
+<body>
+<h1>Show an iCal / ICS calendar on your Wix site</h1>
+<p class="meta">Synced Events Calendar · Questions: <a href="mailto:beobjoong@gmail.com">beobjoong@gmail.com</a></p>
+
+<p>Your events already live in Google Calendar, Outlook, iCloud, Teamup or ChMeetings, and you want the same calendar on a Wix page without typing every event a second time.</p>
+
+<div class="toc">
+  <a href="#what">What an iCal address is</a>
+  <a href="#find">Where to find it</a>
+  <a href="#connect">Connect it in the app</a>
+  <a href="#plans">Free and Pro</a>
+  <a href="#refresh">Refresh intervals</a>
+</div>
+
+<h2 id="what">What an iCal address is</h2>
+<p>An iCal address (also called an ICS or iCalendar feed) is a link to a plain text file that lists your events. Most calendar tools offer one under a "share", "subscribe" or "export" option; the link usually ends in <code>.ics</code> or starts with <code>webcal://</code>. Synced Events Calendar downloads that file on a schedule and shows the events in a widget on your site.</p>
+<p>The address must be reachable without a login: the app reads it the way an anonymous visitor would. <code>https://</code> links are used as they are; <code>webcal://</code> and <code>webcals://</code> links are converted to <code>https://</code>, and <code>http://</code> links are upgraded to <code>https://</code>. Anything else shows <em>Enter the full calendar address, starting with https:// or webcal://.</em></p>
+
+<h2 id="find">Where to find the address</h2>
+<h3>Google Calendar</h3>
+<ol>
+  <li><strong>Public calendar (Calendar ID):</strong> open Google Calendar on the web → gear icon → <em>Settings</em>. Under <em>Settings for my calendars</em> pick the calendar. In <em>Access permissions for events</em> tick <em>Make available to public</em>. Scroll to <em>Integrate calendar</em> and copy the <em>Calendar ID</em> (it looks like an email address).</li>
+  <li><strong>Private calendar (secret address):</strong> same settings page, scroll to <em>Integrate calendar</em> and copy <em>Secret address in iCal format</em>. It is stored encrypted and never shown to visitors.</li>
+</ol>
+<p>A secret address pasted under the public option is refused with <em>This is a secret iCal address. Choose "Google Calendar — private (secret address)" above and paste it there.</em></p>
+
+<h3>Outlook / Microsoft 365</h3>
+<ol>
+  <li>Open Outlook on the web → gear icon → <em>Calendar</em> → <em>Shared calendars</em>.</li>
+  <li>Under <em>Publish a calendar</em> choose the calendar and <em>Can view all details</em>.</li>
+  <li>Click <em>Publish</em> and copy the ICS link (not the HTML link).</li>
+</ol>
+
+<h3>Apple iCloud Calendar</h3>
+<ol>
+  <li>On iCloud.com → Calendar, click the share icon next to the calendar.</li>
+  <li>Tick <em>Public Calendar</em> and copy the link (it starts with <code>webcal://</code>).</li>
+  <li>On a Mac: Calendar app → right-click the calendar → <em>Share Calendar</em> → <em>Public Calendar</em>.</li>
+</ol>
+
+<h3>Teamup</h3>
+<ol>
+  <li>In Teamup open the menu → <em>Preferences</em> → <em>iCalendar feeds</em>.</li>
+  <li>Copy the feed URL of the sub-calendar you want to show (ends with <code>.ics</code>).</li>
+</ol>
+
+<h3>ChMeetings</h3>
+<ol>
+  <li>In ChMeetings open <em>Calendar</em> → <em>Share</em> and copy the iCal link.</li>
+  <li>Only events marked Public are included in the feed. Set each event's visibility to Public in ChMeetings, then click <em>Sync now</em> in the app.</li>
+</ol>
+
+<h3>Any other tool</h3>
+<p>Most calendar tools offer an "iCal", "ICS" or "webcal" subscription link in their sharing or export settings. Paste it under <em>Any other iCal / .ics address</em>.</p>
+
+<h2 id="connect">Connect it in the app</h2>
+<ol>
+  <li>In your Wix dashboard open <em>Apps → Synced Events Calendar</em>.</li>
+  <li>In the <em>Connect a calendar</em> card, choose the provider under <em>Where is the calendar?</em>.</li>
+  <li>Paste the address or Calendar ID into the field.</li>
+  <li>Type a <em>Name shown in the widget</em> (for example "Studio classes") and pick a color.</li>
+  <li>Click <em>Check</em>. The app fetches the feed and answers <em>Found N events in the next 12 months</em> with sample titles, or says why the address cannot be used.</li>
+  <li>Click <em>Connect</em>.</li>
+  <li>In the editor open <em>Add → Apps</em>, find <em>Synced Events Calendar</em> and drag the widget onto a page, then publish the site.</li>
+</ol>
+<div class="note">Not ready with a real calendar yet? Click <em>Use a sample calendar</em> in the dashboard to see the widget working, and replace it later.</div>
+
+<h2 id="plans">What Free and Pro allow</h2>
+<p><strong>Free:</strong> one calendar, refreshed hourly. Adding a second one shows <em>Your plan allows 1 calendar. Upgrade to Pro for up to 10 calendars, 5-minute refresh, the week view and more.</em></p>
+<p><strong>Pro ($4.99/month, or $3.99/month billed yearly, cancel anytime):</strong> up to 10 calendars with colors and filter chips, refresh every 5 minutes instead of hourly, week view, text and background colors, font family, and add-to-calendar buttons for visitors. Upgrade with the <em>Upgrade to Pro</em> button at the top of the dashboard. When all ten are in use: <em>All 10 calendars of the Pro plan are in use. Switch one off or remove it to connect another.</em></p>
+
+<h2 id="refresh">How often the calendar refreshes</h2>
+<p>The app keeps a cached copy of each feed and serves it to visitors. Calendars refresh every hour on Free and every 5 minutes on Pro while visitors use the site, or immediately when you click <em>Sync now</em> in the dashboard. A change made in Google, Outlook or Teamup shows up within one interval.</p>
+<p>Each sync covers a fixed window: from the first day of last month to the end of the same month next year. A feed may be up to 5 MB, must answer within 8 seconds and is capped at 1,500 events per calendar; larger calendars still work but show <em>Partial</em>.</p>
+
+<h2>Related</h2>
+<ul>
+  <li><a href="calendar-not-showing-events.html">My calendar is connected but shows no events</a></li>
+  <li><a href="index.html">Help overview and widget settings</a></li>
+  <li><a href="index.html#plans">Free and Pro in detail</a></li>
+</ul>
+
+<p class="meta" style="margin-top:40px">Synced Events Calendar by operix · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p>
+</body>
+</html>

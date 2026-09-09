@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My calendar is connected but shows no events</title>
+<style>
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #1f2937; max-width: 760px; margin: 0 auto; padding: 48px 20px; }
+  h1 { font-size: 28px; margin-bottom: 4px; }
+  h2 { font-size: 20px; margin-top: 36px; padding-top: 12px; border-top: 1px solid #e5e7eb; }
+  h3 { font-size: 16px; margin-top: 22px; }
+  .meta { color: #6b7280; font-size: 14px; }
+  a { color: #116dff; }
+  ol li, ul li { margin: 4px 0; }
+  code { background: #f3f4f6; padding: 1px 5px; border-radius: 4px; font-size: 14px; }
+  .toc { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px 18px; margin: 18px 0 8px; }
+  .toc a { display: inline-block; margin: 2px 12px 2px 0; }
+  .note { background: #eff6ff; border-radius: 8px; padding: 10px 14px; margin: 10px 0; font-size: 15px; }
+</style>
+</head>
+<body>
+<h1>My calendar is connected but shows no events</h1>
+<p class="meta">Synced Events Calendar · Questions: <a href="mailto:beobjoong@gmail.com">beobjoong@gmail.com</a></p>
+
+<p>The dashboard lists your calendar as connected, yet the widget on your site is empty or misses events you can see in Google, Outlook, Teamup or ChMeetings.</p>
+
+<div class="toc">
+  <a href="#status">Read the Status column</a>
+  <a href="#public">Only Public events</a>
+  <a href="#secret">Secret address under "public"</a>
+  <a href="#window">Outside the window</a>
+  <a href="#notpublic">Google not public</a>
+  <a href="#large">Feed too large</a>
+  <a href="#timing">Refresh timing</a>
+</div>
+
+<h2 id="status">Start with the Status column</h2>
+<p>In your Wix dashboard open <em>Apps → Synced Events Calendar</em> and read the <em>Status</em> column. It has five states:</p>
+<ul>
+  <li><strong>N events</strong> with "Synced …": the last sync worked. If the widget still looks empty, see <a href="#timing">refresh timing</a>.</li>
+  <li><strong>No events found</strong>: the feed answered without an error but produced nothing for the window. The line underneath says which of the causes below applies.</li>
+  <li><strong>Partial</strong>: the line reads <em>Too large to keep whole: kept N of M events</em>, sometimes with <em>descriptions dropped</em>.</li>
+  <li><strong>Error</strong>: the sync failed; the line shows the reason, for example <em>The calendar address was not found (HTTP 404).</em> A red banner, <em>A calendar is not syncing</em>, repeats it: visitors keep seeing the last good copy until the next successful sync.</li>
+  <li><strong>Not shown</strong>: the calendar is on but beyond your plan's limit (one on Free, ten on Pro). Switch another off, remove it, or upgrade.</li>
+</ul>
+<div class="note">Temporary problems such as <em>The calendar address did not answer within 8 seconds.</em> often clear on the next refresh; the app waits for a second failure in a row before it alerts you. <em>Sync now</em> retries immediately.</div>
+
+<h2 id="public">Cause 1: the feed exports only Public events</h2>
+<p>The hint under <em>No events found</em> usually reads: <em>The feed answered but contained no events. Most tools export only public events (ChMeetings, Teamup, Google): make the events public, then "Sync now".</em></p>
+<p>On a live site, a ChMeetings feed synced without any error and still held zero entries: none of its events had been marked Public. Teamup feeds and Google public calendars likewise carry only what the provider treats as public.</p>
+<ol>
+  <li>In the source tool, set each event you want on the site to Public.</li>
+  <li>Click <em>Sync now</em> in the app dashboard; the status should change to <em>N events</em>.</li>
+</ol>
+
+<h2 id="secret">Cause 2: a Google secret address pasted under "public calendar"</h2>
+<p>The <em>Google Calendar — public calendar</em> option expects a Calendar ID that looks like an email address. A secret iCal link pasted there is refused with <em>This is a secret iCal address. Choose "Google Calendar — private (secret address)" above and paste it there.</em></p>
+<ol>
+  <li>In <em>Where is the calendar?</em> choose <em>Google Calendar — private (secret address)</em>.</li>
+  <li>Paste the <em>Secret address in iCal format</em> from Google Calendar → Settings → <em>Integrate calendar</em>.</li>
+  <li>Click <em>Check</em>, then <em>Connect</em>. The address is stored encrypted and never shown to visitors.</li>
+</ol>
+
+<h2 id="window">Cause 3: the events are outside the window</h2>
+<p>Each sync covers a fixed window: from the first day of last month to the end of the same month next year. Events outside it are not fetched, and the widget navigates only inside it. When every event lies outside, the hint reads: <em>The feed holds N entries, but none fall in the next 13 months (past events are kept for one month).</em></p>
+<p>Add or move an event into the window and click <em>Sync now</em>.</p>
+
+<h2 id="notpublic">Cause 4: the Google calendar is not public</h2>
+<p>A calendar connected by ID is read through its public address. If Google answers "not found" or returns something that is not a calendar, the status shows <em>This Google calendar is not public. Make it public in Google Calendar settings, or use its secret iCal address (choose "Google Calendar — private").</em></p>
+<ol>
+  <li>Google Calendar on the web → gear icon → <em>Settings</em> → pick the calendar.</li>
+  <li>In <em>Access permissions for events</em> tick <em>Make available to public</em>.</li>
+  <li>Click <em>Sync now</em>. To keep the calendar private instead, remove it and reconnect it with the secret address.</li>
+</ol>
+
+<h2 id="large">Cause 5: the feed is too large</h2>
+<p>Two limits apply. A feed over 5 MB is not synced at all: <em>This calendar file is larger than 5 MB.</em> A smaller feed with too many events is kept in part and shows <em>Partial</em>: each calendar is capped at 1,500 events, upcoming events are kept in preference to past ones, and if the stored copy is still over budget, descriptions are shortened, then dropped, then the latest-dated events are cut.</p>
+<p>To show everything, publish a smaller calendar, such as a Teamup sub-calendar feed or a calendar that holds only upcoming events.</p>
+
+<h2 id="timing">Cause 6: the widget is showing an older copy</h2>
+<p>Visitors see a cached copy of each feed. It refreshes every hour on Free and every 5 minutes on Pro while visitors use the site, or immediately when you click <em>Sync now</em> at the top of the dashboard. Events you have just added appear after the next refresh.</p>
+<p>The <em>Next events</em> card in the dashboard shows what the widget shows right now. Also check that the widget sits on a published page and the calendar's <em>On</em> switch is on.</p>
+
+<h2>Still empty?</h2>
+<p>Use <em>Send feedback</em> in the app dashboard or email <a href="mailto:beobjoong@gmail.com">beobjoong@gmail.com</a> with your site address, the calendar type and the text under the status badge.</p>
+
+<h2>Related</h2>
+<ul>
+  <li><a href="ical-calendar-on-wix.html">Show an iCal / ICS calendar on your Wix site</a></li>
+  <li><a href="index.html#google">Google Calendar: public ID and secret address</a></li>
+  <li><a href="index.html#trouble">Help overview: troubleshooting</a></li>
+</ul>
+
+<p class="meta" style="margin-top:40px">Synced Events Calendar by operix · <a href="../privacy.html">Privacy</a> · <a href="../terms.html">Terms</a></p>
+</body>
+</html>
