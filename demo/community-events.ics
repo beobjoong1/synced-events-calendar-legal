@@ -1,7 +1,7 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Synced Events Calendar//Demo//EN
-X-WR-CALNAME:Community events
+X-WR-CALNAME:Sample events (Synced Events Calendar demo)
 BEGIN:VTIMEZONE
 TZID:America/New_York
 BEGIN:DAYLIGHT
@@ -24,7 +24,7 @@ UID:e1@synced-events-calendar.demo
 DTSTAMP:20260901T000000Z
 DTSTART;TZID=America/New_York:20260912T140000
 DTEND;TZID=America/New_York:20260912T170000
-SUMMARY:Open House & Free Trial Day
+SUMMARY:Sample: Open House & Free Trial Day
 LOCATION:Northside Community Studio
 DESCRIPTION:Try any class for free, meet the teachers, tour the space.
 END:VEVENT
@@ -33,7 +33,7 @@ UID:e2@synced-events-calendar.demo
 DTSTAMP:20260901T000000Z
 DTSTART;TZID=America/New_York:20260919T090000
 DTEND;TZID=America/New_York:20260919T130000
-SUMMARY:Farmers Market Pop-up
+SUMMARY:Sample: Farmers Market Pop-up
 LOCATION:Front courtyard
 DESCRIPTION:Local produce, coffee and live music.
 END:VEVENT
@@ -42,7 +42,7 @@ UID:e3@synced-events-calendar.demo
 DTSTAMP:20260901T000000Z
 DTSTART;TZID=America/New_York:20260926T180000
 DTEND;TZID=America/New_York:20260926T210000
-SUMMARY:Autumn Potluck
+SUMMARY:Sample: Autumn Potluck
 LOCATION:Community hall
 DESCRIPTION:Bring a dish to share. Vegetarian options encouraged.
 END:VEVENT
@@ -51,7 +51,7 @@ UID:e4@synced-events-calendar.demo
 DTSTAMP:20260901T000000Z
 DTSTART;TZID=America/New_York:20261003T090000
 DTEND;TZID=America/New_York:20261003T120000
-SUMMARY:Volunteer Day: Park Clean-up
+SUMMARY:Sample: Volunteer Day: Park Clean-up
 LOCATION:Riverside Park
 DESCRIPTION:Gloves and bags provided.
 END:VEVENT
@@ -60,7 +60,7 @@ UID:e5@synced-events-calendar.demo
 DTSTAMP:20260901T000000Z
 DTSTART;TZID=America/New_York:20260905T110000
 DTEND;TZID=America/New_York:20260905T123000
-SUMMARY:Book Club: The Overstory
+SUMMARY:Sample: Book Club: The Overstory
 LOCATION:Lounge
 DESCRIPTION:New members welcome.
 END:VEVENT
@@ -69,7 +69,7 @@ UID:e6@synced-events-calendar.demo
 DTSTAMP:20260901T000000Z
 DTSTART;VALUE=DATE:20260914
 DTEND;VALUE=DATE:20260919
-SUMMARY:Members' Appreciation Week
+SUMMARY:Sample: Members' Appreciation Week
 DESCRIPTION:Free guest passes for members all week.
 END:VEVENT
 BEGIN:VEVENT
@@ -77,6 +77,6 @@ UID:e7@synced-events-calendar.demo
 DTSTAMP:20260901T000000Z
 DTSTART;VALUE=DATE:20261012
 DTEND;VALUE=DATE:20261013
-SUMMARY:Studio closed: Columbus Day
+SUMMARY:Sample: Studio closed: Columbus Day
 END:VEVENT
 END:VCALENDAR
