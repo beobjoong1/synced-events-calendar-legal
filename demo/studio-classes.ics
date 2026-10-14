@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Calendar Sync//Demo//EN
+PRODID:-//Events Calendar Sync//Demo//EN
 X-WR-CALNAME:Studio classes
 BEGIN:VTIMEZONE
 TZID:America/New_York
