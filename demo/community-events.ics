@@ -1,7 +1,7 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Synced Events Calendar//Demo//EN
-X-WR-CALNAME:Sample events (Synced Events Calendar demo)
+PRODID:-//Calendar Sync//Demo//EN
+X-WR-CALNAME:Sample events (Calendar Sync demo)
 BEGIN:VTIMEZONE
 TZID:America/New_York
 BEGIN:DAYLIGHT
