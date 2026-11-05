@@ -1,5 +1,5 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//operix//Events Calendar Sync demo//EN
+PRODID:-//operix//Google Calendar Events Sync demo//EN
 X-WR-CALNAME:Empty test feed
 END:VCALENDAR
