@@ -35,13 +35,14 @@
   <a href="#own">Your own events</a>
   <a href="#widget">Widget settings</a>
   <a href="#plans">Free and Pro</a>
+  <a href="#assistant">Schedule Assistant</a>
   <a href="#trouble">Troubleshooting</a>
 </div>
 <div class="note">Guides: <a href="ical-calendar-on-wix.html">Show an iCal / ICS calendar on your Wix site</a> · <a href="calendar-not-showing-events.html">My calendar is connected but shows no events</a></div>
 
 <h2 id="start">Getting started (three steps)</h2>
 <ol>
-  <li><strong>Connect a calendar.</strong> In your Wix dashboard open <em>Apps → Google Calendar Events Sync</em>, choose where your calendar lives and paste its address (directions below). Not ready yet? Click <em>Use a sample calendar</em> to see the widget working right away.</li>
+  <li><strong>Connect a calendar.</strong> In your Wix dashboard open <em>Apps → Google Calendar Events Sync</em>, choose where your calendar lives and paste its address (directions below). Not ready yet? Click <em>Use a sample calendar</em> to see the widget working right away. No external calendar? In the editor's settings panel (or on the <em>Your events</em> page) add your first event right there — a title, a date and, if you like, a time. Visitors see it on the published site.</li>
   <li><strong>Add the widget to a page.</strong> In the editor open <em>Add → Apps → Google Calendar Events Sync</em> and drop the widget onto a page. The widget's settings panel controls the view, colors, week start and time zone.</li>
   <li><strong>Publish the site.</strong> From then on the calendar refreshes on its own: hourly on the Free plan, every 5 minutes on Pro.</li>
 </ol>
@@ -87,6 +88,7 @@
 
 <h2 id="own">Your own events</h2>
 <p>No outside calendar needed: in the app dashboard open <em>Your events</em> (or click <em>Or create events here</em>) and choose <em>Add an event</em>. An event has a title, a date and time or <em>All day</em>, and optionally a location, a description and a link. It can repeat daily, weekly or monthly, until a date you pick. Times are kept in the event's time zone, and repeating events keep the same clock time across daylight saving. Your events appear in the widget next to any connected calendar, labelled <em>Your events</em>. On the Free plan they count as your one calendar.</p>
+<p>Give an event categories — comma-separated, for example <em>Kids, Music</em>. On Pro the calendar shows category buttons so visitors can filter; in the widget settings you can leave a category out of one widget. Categories also come from Wix Events and iCal feeds.</p>
 <p><strong>Pictures (Pro):</strong> choose an image from your site's media; it shows in the event details.</p>
 <h3 id="suggestions">Visitor suggestions (Pro)</h3>
 <p>Turn on <em>Visitor suggestions</em> on the <em>Your events</em> page and visitors see a <em>Suggest an event</em> button in the calendar. A suggestion has a title, a date and time, and optionally a location, a description and a link; the form does not ask for a name or email. Each one waits on <em>Your events</em> until you approve it (it becomes one of your events) or decline it (it is deleted) &mdash; nothing appears on your site before you approve it. The dashboard home tells you when suggestions are waiting. Up to 50 can wait at once. Turning suggestions off removes the button and keeps the ones already waiting.</p>
@@ -99,10 +101,21 @@
   <li><strong>Calendar chips, location, descriptions:</strong> show or hide them; a location that is an address comes with a map link; descriptions in list views can be one line, the full text or hidden.</li>
   <li><strong>Pro extras for visitors:</strong> a search box, pictures in the event details (for Wix Events and events you create here; Google Calendar and iCal feeds don't carry pictures), add-to-calendar buttons (Google, .ics), a <em>Subscribe</em> button that offers the whole calendar as a feed, and a <em>Suggest an event</em> button when you turn on visitor suggestions.</li>
 </ul>
+<p>Events with a location are also published as structured data (JSON-LD) so search engines can list them. This is on for every plan.</p>
 
 <h2 id="plans">Free and Pro</h2>
-<p><strong>Free:</strong> one calendar (a connected calendar or the events you create), the next 100 upcoming events, month and list views, hourly refresh, no watermark. Sites that installed the app before this limit started on 12 October 2026 keep all their events.</p>
+<p><strong>Free:</strong> one calendar (a connected calendar or the events you create), the next 100 upcoming events, month and list views, hourly refresh, no watermark. Sites that installed the app before this limit started on 12 October 2026 keep all their events. Connect a second calendar on Free and it is saved switched off — marked <em>Waiting for Pro</em> — and turns on by itself when you start Pro (up to nine waiting).</p>
 <p><strong>Pro ($4.99/month, or $3.99/month billed yearly):</strong> up to ten calendars with colors and filter chips, every upcoming event, refresh every 5 minutes, week and day views, search, pictures on Wix Events and your own events, visitor suggestions you approve, add-to-calendar and subscribe buttons. Upgrade from the app dashboard; the plan is per site.</p>
+<p><strong>Schedule Assistant ($14.99/month, or $11.99/month billed yearly):</strong> everything in Pro, plus a list of what changed after every sync, a ready-to-paste draft of this week's events and tools for the Wix AI assistant — see <a href="#assistant">Schedule Assistant</a> below.</p>
+
+<h2 id="assistant">Schedule Assistant</h2>
+<p>Schedule Assistant includes everything in Pro and adds three things for people who run a programme — a church, a club, a school, a community group:</p>
+<ul>
+  <li><strong>What changed.</strong> After every sync the dashboard lists the events that were added, cancelled or moved since you last looked, so you can tell your people without reading the whole calendar again. When something changed you also get a note in your Wix dashboard.</li>
+  <li><strong>This week's draft.</strong> The dashboard writes a short ‘this week’ text from your synced events — ready to paste into a newsletter, a bulletin or a social post. Choose which day your week starts, press <em>Copy draft</em>, read it over and paste it. On the current app version the draft is written with AI help from your event titles, times and places; it is a draft, so check the dates before you send it.</li>
+  <li><strong>Ask the Wix AI assistant (Aria).</strong> In the dashboard chat you can ask things like ‘what's on this weekend?’, ‘is every calendar syncing?’ or ‘add a bake sale on Saturday at 10’. The assistant reads your calendar through the app and shows a preview before it creates anything.</li>
+</ul>
+<p>Upgrade from the app dashboard; the plan is per site. Your calendars, settings and the widget stay exactly as they are.</p>
 
 <h2 id="trouble">Troubleshooting</h2>
 <h3>"This needs the CMS app on your site"</h3>
